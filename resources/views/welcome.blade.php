@@ -128,7 +128,9 @@
                     <div class="types row justify-content-md-center">
                         @foreach($types as $type)
                             <div class="col-sm text-center">
-                                <a href="/products/{{$type->name}}"><img class="images" src="{{asset('storage/'.$type->image)}}"></a>
+                                <?php $url = "s3://readandwriteassets/stationary-type/".$type->image?>
+        {{-- <img src="{{$url}}" alt="image"> --}}
+                                <a href="/products/{{$type->name}}"><img class="images" src="{{$url}}"></a>
                             </div>
                         @endforeach
                     </div>
