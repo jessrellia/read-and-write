@@ -146,7 +146,9 @@
                 <div class="row">
                 @foreach ($products as $product)
                     <div class="col-lg-4 col-md-6 col-sm-8 col-xs-8 card bg-light" onclick="window.location.href = '/details/{{$product->id}}' ;" style="width: 20rem;">
-                        <img class="card-image-top" src="{{asset('storage/'.$product->image)}}">
+                        {{-- <img class="card-image-top" src="{{asset('storage/'.$product->image)}}"> --}}
+                        <?php $url = "https://readandwriteassets.s3.amazonaws.com/".$product->image?>
+                        <img class="card-image-top" src="{{$url}}">
                         <div class="card-body">
                         <h5 class="card-title">{{$product->name}}</h5>
                         <p class="card-text">{{$product->description}}</p>

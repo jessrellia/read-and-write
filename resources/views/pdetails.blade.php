@@ -138,7 +138,9 @@
     <div class="container prod-details">
         <div class="row justify-content-md-center">
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 justify-content-start content">
-            <img src="{{asset('storage/'.$product_details->image)}}">
+            {{-- <img src="{{asset('storage/'.$product_details->image)}}"> --}}
+            <?php $url = "https://readandwriteassets.s3.amazonaws.com/".$product_details->image?>
+            <img src={{$url}}>
           </div>
           <div class="col-lg-5 col-md-5 col-sm-4 col-xs-8 align-self-center content">
             <span>Stationary Name: {{$product_details->name}}</span>
