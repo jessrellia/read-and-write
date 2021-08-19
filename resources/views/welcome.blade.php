@@ -128,8 +128,7 @@
                     <div class="types row justify-content-md-center">
                         @foreach($types as $type)
                             <div class="col-sm text-center">
-                                <?php $url = "https://readandwriteassets.s3.amazonaws.com/stationary-type/".$type->image?>
-        {{-- <img src="{{$url}}" alt="image"> --}}
+                                <?php $url = "https://readandwriteassets.s3.amazonaws.com/".$type->image?>
                                 <a href="/products/{{$type->name}}"><img class="images" src="{{$url}}"></a>
                             </div>
                         @endforeach
